@@ -43,5 +43,23 @@ footer .smokebg {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 10%;
+    width: 20%;
+}
+
+@media (max-width: 992px) {
+    .social {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .social {
+        width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .social {
+        width: 70%;
+    }
 }

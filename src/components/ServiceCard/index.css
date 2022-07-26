@@ -45,3 +45,13 @@
 .service-card p {
     width: 80%;
 }
+
+@media (max-width: 992px) {
+    .service-group {
+        flex-direction: column;
+    }
+
+    .service-card {
+        width: 90%;
+    }
+}

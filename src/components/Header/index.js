@@ -14,7 +14,7 @@ function Header() {
                         <div className='hero-content'>
                             <img src={spacedogLogo} className='spacedog-logo' alt='Spacedog logo' />
                             <h1>Spacedog Digital</h1>
-                            <a href='#'>
+                            <a href='#main-content'>
                                 <img src={arrowDownButton} className='arrowdown' alt='Down arrow button' />
                             </a>
                         </div>

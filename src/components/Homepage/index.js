@@ -25,7 +25,7 @@ function Homepage() {
         <div className='layout-container'>
             <Header />
 
-            <main className='main-content'>
+            <main className='main-content' id='main-content'>
                 <div className='main-content-heading'>
                     <div className='main-content-heading-content'>
                         <h2>Services We Can Help You</h2>
@@ -83,7 +83,7 @@ function Homepage() {
                             <div className='contact-content text-align-center'>
                                 <h2>Can't wait to hear from you</h2>
                                 <form className='form-container' onSubmit={handleContactForm}>
-                                    <div className='d-flex'>
+                                    <div className='d-flex form-group-container'>
                                         <div className='form-group'>
                                             <label htmlFor='firstname'>Firstname *</label>
                                             <input type='text' name='firstname' id='firstname' className='form-control' placeholder='Firstname' onChange={(e) => setFirstname(e.target.value)} />
@@ -95,7 +95,7 @@ function Homepage() {
                                         </div>
                                     </div>
 
-                                    <div className='d-flex justify-space-between'>
+                                    <div className='d-flex justify-space-between form-group-container'>
                                         <div className='form-group'>
                                             <label htmlFor='email'>Email *</label>
                                             <input type='email' name='email' id='email' className='form-control' placeholder='Email' onChange={(e) => setEmail(e.target.value)} />

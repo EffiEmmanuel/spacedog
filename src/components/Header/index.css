@@ -52,3 +52,10 @@ header .smokebg {
     width: 80%;
     /* width: 250px; */
 }
+
+
+@media (max-width: 992px) {
+    header .skew-background {
+        padding: 180px 50px;
+    }
+}

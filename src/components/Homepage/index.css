@@ -50,3 +50,21 @@
     color: #4f4e6285;
     font-size: .8rem;
 }
+
+@media (max-width: 992px) {
+    .form-group-container {
+        flex-direction: column;
+    }
+
+    .contact .skew-container .skew-background {
+        padding: 100px 80px;
+    }
+
+    .main-content-heading-content {
+        width: 85%;
+    }
+
+    .main-content {
+        margin-top: 40px;
+    }
+}
