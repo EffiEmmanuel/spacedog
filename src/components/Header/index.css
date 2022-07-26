@@ -41,6 +41,14 @@ header .hero-content {
 .arrowdown {
     object-fit: cover;
     width: 80px;
+    animation: bounce 1.5s ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    from { transform: translate3d(0, 0, 0);}
+    to { transform: translate3d(0, 5px, 0);}
 }
 
 header .smokebg {

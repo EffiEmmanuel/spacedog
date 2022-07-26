@@ -7,6 +7,8 @@ import codeLight from '../../assets/images/Code_light.png'
 import ServiceCard from '../ServiceCard'
 import Footer from '../Footer'
 import Header from '../Header'
+import ReCAPTCHA from 'react-google-recaptcha'
+import axios from 'axios'
 
 function Homepage() {
     const [firstname, setFirstname] = useState()
@@ -14,11 +16,28 @@ function Homepage() {
     const [email, setEmail] = useState()
     const [phone, setPhone] = useState()
     const [message, setMessage] = useState()
+    const [isVerified, setIsVerified] = useState(false)
+    // const [disabled, setDisabled] = useState('disabled')
 
+    // Testing environment variables
+    console.log(process.env.SECRET_KEY)
 
+    // handle form submission
     const handleContactForm = async (e) => {
         e.preventDefault()
-        console.log(e)
+        
+        // check if captcha is verified
+        if(isVerified) {
+            axios.post()
+        } else {
+            console.log('Captcha not filled yet!')
+        }
+    }
+
+    // handle captcha verification
+    const handleOnChange = (value) => {
+        console.log('Captcha value:', value)
+        setIsVerified(true)
     }
 
     return (
@@ -82,6 +101,7 @@ function Homepage() {
                         <div className='skew-background'>
                             <div className='contact-content text-align-center'>
                                 <h2>Can't wait to hear from you</h2>
+                                <h1>{isVerified}</h1>
                                 <form className='form-container' onSubmit={handleContactForm}>
                                     <div className='d-flex form-group-container'>
                                         <div className='form-group'>
@@ -112,8 +132,15 @@ function Homepage() {
                                         <textarea className='form-control' id='message' name='message' placeholder='' />
                                     </div>
 
+                                    <div className='form-group d-flex mt-4 justify-content-center'>
+                                        <ReCAPTCHA
+                                            sitekey='6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+                                            onChange={handleOnChange}
+                                        />
+                                    </div>
+
                                     <div className='form-group d-flex justify-content-center'>
-                                        <button className='btn btn-primary mt-3 py-2 px-4 send-button'>Send</button>
+                                        <button className='btn btn-primary mt-3 py-2 px-4 send-button' disabled={!isVerified} >Send</button>
                                     </div>
                                 </form>
                             </div>
