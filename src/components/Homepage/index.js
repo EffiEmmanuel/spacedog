@@ -20,7 +20,7 @@ function Homepage() {
     // const [disabled, setDisabled] = useState('disabled')
 
     // Testing environment variables
-    console.log(process.env.SECRET_KEY)
+    // console.log(process.env.SECRET_KEY)
 
     // handle form submission
     const handleContactForm = async (e) => {
