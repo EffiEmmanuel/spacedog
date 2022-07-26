@@ -1,0 +1,54 @@
+header .skew-container {
+    height: 750px;
+    width: 100%;
+    overflow: hidden;
+}
+
+header .skew-background {
+    height: 100%;
+    margin-top: -9%;
+    padding: 180px;
+    background-color: #ff9424;
+    transform: skew(0deg, 5deg);
+    position: relative;
+}
+
+header .hero-content {
+    transform: skew(0deg, -5deg);
+}
+
+.spacedog-logo {
+    object-fit: cover;
+    width: 200px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-content > * {
+    margin: 5px 0;
+}
+
+.hero-content .arrowdown {
+    margin: 40px 0 0;
+}
+
+.arrowdown {
+    object-fit: cover;
+    width: 80px;
+}
+
+header .smokebg {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    object-fit: cover;
+    opacity: .5;
+    width: 80%;
+    /* width: 250px; */
+}

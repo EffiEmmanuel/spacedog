@@ -1,0 +1,47 @@
+/* SERVICE STYLE RULES */
+.services {
+    /* margin-top: 20px; */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-card {
+    background-color: rgba(255, 190, 121, 0.05);
+    margin: 15px;
+    padding: 35px 50px;
+    height: 340px;
+    width: 647px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+.service-card img {
+    width: 60px;
+}
+
+.service-card-cta a {
+    display: flex;
+    align-items: center;
+    color: #ff9424;
+    text-decoration: none;
+}
+.service-card-cta a span:nth-child(1) {
+    margin-right: 20px;
+}
+
+.service-card-cta img {
+    width: 35px;
+}
+
+.service-card p {
+    width: 80%;
+}

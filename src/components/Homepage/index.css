@@ -1,0 +1,52 @@
+/* MAIN CONTENT STYLE RULES */
+.main-content-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* width: 100%; */
+}
+
+.main-content-heading-content {
+    width: 50%;
+}
+
+
+/* CONTACT SECTION STYLE RULES */
+.contact .skew-container {
+    height: 900px;
+    overflow: hidden;
+}
+
+.contact .skew-container .skew-background {
+    height: 100%;
+    transform: skew(0deg, -5deg);
+    background-color: #ff9424;
+    color: #fff;
+    margin-top: 9%;
+    padding: 180px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact .skew-container .skew-background h2 {
+    text-align: center;
+}
+
+.contact .contact-content {
+    transform: skew(0deg, 5deg);
+}
+
+.form-container .form-group {
+    margin: 10px;
+}
+
+.form-container textarea {
+    height: 150px;
+}
+
+.form-control::placeholder {
+    color: #4f4e6285;
+    font-size: .8rem;
+}

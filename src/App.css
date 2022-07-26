@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+html {
+    background-color: #2f2f2f;
+}
+
+body {
+    font-size: .85rem;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+.logo {
+    width: 130px;
+    object-fit: cover;
+}
+
+.container {
+    padding: 15px 80px;
+}
+
+.ventify-pink {
+    color: #FF385C;
+}

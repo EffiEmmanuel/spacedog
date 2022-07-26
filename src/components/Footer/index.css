@@ -1,0 +1,47 @@
+/* FOOTER SECTION STYLE RULES */
+
+footer {
+    position: relative;
+    background-color: #2f2f2f;
+}
+
+.footer .skew-container {
+    height: 100px;
+    overflow: hidden;
+}
+
+footer .skew-background {
+    height: 100%;
+    padding: 100px;
+    transform: skew(0deg, 3deg);
+    position: relative;
+    bottom: 40px;
+    background-color: #2f2f2f;
+    overflow: hidden;
+}
+
+footer .footer-content {
+    transform: skew(0deg, -3deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+footer .smokebg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    opacity: .2;
+}
+
+.social {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 10%;
+}
