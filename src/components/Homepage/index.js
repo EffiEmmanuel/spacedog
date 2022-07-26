@@ -17,7 +17,6 @@ function Homepage() {
     const [phone, setPhone] = useState()
     const [message, setMessage] = useState()
     const [isVerified, setIsVerified] = useState(false)
-    // const [disabled, setDisabled] = useState('disabled')
 
     // Testing environment variables
     // console.log(process.env.SECRET_KEY)
@@ -25,10 +24,20 @@ function Homepage() {
     // handle form submission
     const handleContactForm = async (e) => {
         e.preventDefault()
-        
+
         // check if captcha is verified
         if(isVerified) {
-            axios.post()
+            axios.post('http://localhost:5010/api/sendEmail', {
+                firstname,
+                lastname,
+                email,
+                phone,
+                message
+            }).then(response => {
+                console.log('Response:', response)
+            }).catch(error => {
+                console.log('Error:', error)
+            })
         } else {
             console.log('Captcha not filled yet!')
         }
@@ -37,7 +46,7 @@ function Homepage() {
     // handle captcha verification
     const handleOnChange = (value) => {
         console.log('Captcha value:', value)
-        setIsVerified(true)
+        isVerified ? setIsVerified(false) : setIsVerified(true)
     }
 
     return (
@@ -129,7 +138,7 @@ function Homepage() {
 
                                     <div className='form-group'>
                                         <label htmlFor='message'>Message *</label>
-                                        <textarea className='form-control' id='message' name='message' placeholder='' />
+                                        <textarea className='form-control' id='message' name='message' placeholder='Hi Sandro,' onChange={(e) => setMessage(e.target.value)} />
                                     </div>
 
                                     <div className='form-group d-flex mt-4 justify-content-center'>
