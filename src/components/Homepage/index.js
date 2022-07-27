@@ -35,6 +35,13 @@ function Homepage() {
                 message
             }).then(response => {
                 console.log('Response:', response)
+                setFirstname('')
+                setLastname('')
+                setEmail('')
+                setPhone('')
+                setMessage('')
+                setIsVerified(false)
+                window.location.reload()
             }).catch(error => {
                 console.log('Error:', error)
             })
